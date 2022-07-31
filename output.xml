@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.8.10 on darwin)" generated="20220730 16:48:37.153" rpa="false" schemaversion="2">
+<suite id="s1" name="Test Case1" source="/Users/sefikkesim/Desktop/UI_Testing_Robot_framework/test_cases/test_case1.robot">
+<test id="s1-t1" name="Reagister User">
+<kw name="Open Browser">
+<arg>${base_url}</arg>
+<arg>${browser}</arg>
+<msg timestamp="20220730 16:48:37.174" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" starttime="20220730 16:48:37.174" endtime="20220730 16:48:37.177"/>
+</kw>
+<kw name="Get Location">
+<var>${url}</var>
+<status status="NOT RUN" starttime="20220730 16:48:37.179" endtime="20220730 16:48:37.179"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${base_url}</arg>
+<arg>${url}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20220730 16:48:37.182" endtime="20220730 16:48:37.182"/>
+</kw>
+<kw name="Click Link">
+<arg>${login_link}</arg>
+<status status="NOT RUN" starttime="20220730 16:48:37.183" endtime="20220730 16:48:37.183"/>
+</kw>
+<kw name="Element Should Be Visible">
+<arg>${new_user_signup_text}</arg>
+<status status="NOT RUN" starttime="20220730 16:48:37.184" endtime="20220730 16:48:37.184"/>
+</kw>
+<kw name="Input Text">
+<arg>${signup_name}</arg>
+<arg>${name}</arg>
+<status status="NOT RUN" starttime="20220730 16:48:37.185" endtime="20220730 16:48:37.185"/>
+</kw>
+<kw name="Input Text">
+<arg>${signup_email}</arg>
+<arg>${email}</arg>
+<status status="NOT RUN" starttime="20220730 16:48:37.186" endtime="20220730 16:48:37.186"/>
+</kw>
+<kw name="Click Button">
+<arg>${signup_btn}</arg>
+<status status="NOT RUN" starttime="20220730 16:48:37.187" endtime="20220730 16:48:37.187"/>
+</kw>
+<status status="FAIL" starttime="20220730 16:48:37.173" endtime="20220730 16:48:37.187">No keyword with name 'Open Browser' found.</status>
+</test>
+<status status="FAIL" starttime="20220730 16:48:37.155" endtime="20220730 16:48:37.188"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Test Case1">Test Case1</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220730 16:48:37.170" level="ERROR">Error in file '/Users/sefikkesim/Desktop/UI_Testing_Robot_framework/test_cases/test_case1.robot' on line 3: Importing library 'Selenium2Library' failed: ModuleNotFoundError: No module named 'Selenium2Library'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /Users/sefikkesim/.vscode/extensions/robocorp.robotframework-lsp-0.49.0/src/robotframework_debug_adapter
+  /Users/sefikkesim/Desktop/UI_Testing_Robot_framework
+  /Users/sefikkesim/.vscode/extensions/robocorp.robotframework-lsp-0.49.0/src
+  /Users/sefikkesim/.vscode/extensions/robocorp.robotframework-lsp-0.49.0/src/robotframework_ls/vendored
+  /Users/Shared/robocorp/ht/366188f_b1f3c24_0041a488/lib/python38.zip
+  /Users/Shared/robocorp/ht/366188f_b1f3c24_0041a488/lib/python3.8
+  /Users/Shared/robocorp/ht/366188f_b1f3c24_0041a488/lib/python3.8/lib-dynload
+  /Users/Shared/robocorp/ht/366188f_b1f3c24_0041a488/lib/python3.8/site-packages</msg>
+</errors>
+</robot>
