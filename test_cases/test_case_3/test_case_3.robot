@@ -4,19 +4,15 @@ Library     Selenium2Library
 
 Resource                  ../variable.robot
 Resource                  ../test_data.robot
-Resource                  ../signup_page_locaters.robot
 Resource                  ../home_page_locaters.robot
-Resource                   ../global_keywords.robot
-Resource                  keywords.robot
-
+Resource                  ../login_page_locaters.robot
+Resource                  ../signup_page_locaters.robot
+Resource                  ../global_keywords.robot
+Resource                   keywords.robot
 
 Test Setup         Run keywords   Navigate The Website And Verify Home Page is Visible
 Test Teardown      Close Browser
 
 *** Test Case ***
-Reagister User
-    Input User Information And Click Signup Button 
-    Fill Out Register Form And Create A New Account
-    Verify A New Account is Created
-    Delete The Account
-  
+Login User With Incorrect Email and Password
+    Login With Valid User Email, Password And Verify That User is not Logged In

@@ -1,11 +1,6 @@
 *** Keywords ***
-Navigate The Website And Verify Home Page is Visible
-    Open Browser   ${base_url}       ${browser} 
-    ${url}  Get Location 
-    Should Be Equal      ${base_url}     ${url}
-
 Input User Information And Click Signup Button
-   Click Element 	  	 ${login_link}
+    Click Element 	  	 ${login_link}
     Input Text 	 ${signup_name} 	 ${f_name}
     Input Text 	 ${signup_email} 	 ${email}
     Click Button 	 ${signup_btn} 
@@ -36,5 +31,3 @@ Verify A New Account is Created
     Click Element 	 ${continue_button} 
     Element Should Be Visible   ${logged_with_username_text}
 
-Delete The Account
-    Click Element 	  ${delete_account_link}	

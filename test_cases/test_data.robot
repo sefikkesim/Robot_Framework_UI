@@ -3,6 +3,8 @@ ${f_name}        Jhon
 ${l_name}        Smith
 ${pass}         123456
 ${email}       jhon5@gmail.com
+${invalid_email}   abcd@yahoo.com
+${invalid_password}    776655443
 ${company_name}     QA Technologies
 ${address1_street}     Blue way street
 ${address2_building}     No : 11

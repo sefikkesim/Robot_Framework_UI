@@ -1,4 +1,8 @@
 *** Variable ***
+${new_user_signup_text}     xpath = //*[contains(text(),'New User Signup!')]
+${signup_name}   xpath = //input [@name = 'name']
+${signup_email}   xpath = //input [@data-qa = 'signup-email']
+${signup_btn}      xpath = //button[@data-qa = 'signup-button']
 ${enter_account_information_text}    xpath = //*[contains(text(),'Enter Account Information')]
 ${password}     xpath = //input[@id = 'password']
 ${days}         xpath = //select[@id = 'days']       
