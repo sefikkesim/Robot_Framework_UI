@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.5 on darwin)" generated="20220731 22:01:33.094" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.10.5 on darwin)" generated="20220801 13:37:30.821" rpa="false" schemaversion="3">
 <suite id="s1" name="UI Testing Robot framework" source="/Users/sefikkesim/Desktop/UI_Testing_Robot_framework">
 <suite id="s1-s1" name="Test Cases" source="/Users/sefikkesim/Desktop/UI_Testing_Robot_framework/test_cases">
-<suite id="s1-s1-s1" name="Test Case 5" source="/Users/sefikkesim/Desktop/UI_Testing_Robot_framework/test_cases/test_case_5">
-<suite id="s1-s1-s1-s1" name="Test Case 5" source="/Users/sefikkesim/Desktop/UI_Testing_Robot_framework/test_cases/test_case_5/test_case_5.robot">
-<test id="s1-s1-s1-s1-t1" name="Register User With Existing Email Address" line="18">
+<suite id="s1-s1-s1" name="Test Case 6" source="/Users/sefikkesim/Desktop/UI_Testing_Robot_framework/test_cases/test_case_6">
+<suite id="s1-s1-s1-s1" name="Test Case 6" source="/Users/sefikkesim/Desktop/UI_Testing_Robot_framework/test_cases/test_case_6/test_case_6.robot">
+<test id="s1-s1-s1-s1-t1" name="Contact Us Form" line="16">
 <kw name="Run Keywords" library="BuiltIn" type="SETUP">
 <arg>Navigate The Website And Verify Home Page is Visible</arg>
 <doc>Executes all the given keywords in a sequence.</doc>
@@ -13,76 +13,134 @@
 <arg>${base_url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220731 22:01:33.188" level="INFO">Opening browser 'chrome' to base url 'https://automationexercise.com/'.</msg>
-<status status="PASS" starttime="20220731 22:01:33.187" endtime="20220731 22:01:41.114"/>
+<msg timestamp="20220801 13:37:30.912" level="INFO">Opening browser 'chrome' to base url 'https://automationexercise.com/'.</msg>
+<status status="PASS" starttime="20220801 13:37:30.912" endtime="20220801 13:37:40.115"/>
 </kw>
 <kw name="Get Location" library="Selenium2Library">
 <var>${url}</var>
 <doc>Returns the current browser window URL.</doc>
-<msg timestamp="20220731 22:01:41.138" level="INFO">${url} = https://automationexercise.com/</msg>
-<status status="PASS" starttime="20220731 22:01:41.115" endtime="20220731 22:01:41.141"/>
+<msg timestamp="20220801 13:37:40.150" level="INFO">${url} = https://automationexercise.com/</msg>
+<status status="PASS" starttime="20220801 13:37:40.116" endtime="20220801 13:37:40.151"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${base_url}</arg>
 <arg>${url}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20220731 22:01:41.141" endtime="20220731 22:01:41.144"/>
+<status status="PASS" starttime="20220801 13:37:40.152" endtime="20220801 13:37:40.152"/>
 </kw>
-<status status="PASS" starttime="20220731 22:01:33.181" endtime="20220731 22:01:41.144"/>
+<status status="PASS" starttime="20220801 13:37:30.912" endtime="20220801 13:37:40.152"/>
 </kw>
-<status status="PASS" starttime="20220731 22:01:33.181" endtime="20220731 22:01:41.144"/>
+<status status="PASS" starttime="20220801 13:37:30.912" endtime="20220801 13:37:40.152"/>
 </kw>
-<kw name="Try To Register With Existing Email Address" library="keywords">
+<kw name="Navigate To Contact Us Page And Verify That Landed To Contact Us Page" library="keywords">
 <kw name="Click Element" library="Selenium2Library">
-<arg>${login_link}</arg>
+<arg>${contact_us_link}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220731 22:01:41.145" level="INFO">Clicking element 'xpath = //a[@href = '/login']'.</msg>
-<status status="PASS" starttime="20220731 22:01:41.145" endtime="20220731 22:01:44.187"/>
+<msg timestamp="20220801 13:37:40.153" level="INFO">Clicking element 'xpath = //a[@href = '/contact_us']'.</msg>
+<status status="PASS" starttime="20220801 13:37:40.153" endtime="20220801 13:37:45.547"/>
 </kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>${get_in_touch_text}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220801 13:37:45.835" level="INFO">Element 'xpath = //*[contains(text(),'Get In Touch')]' is displayed.</msg>
+<status status="PASS" starttime="20220801 13:37:45.547" endtime="20220801 13:37:45.836"/>
+</kw>
+<status status="PASS" starttime="20220801 13:37:40.152" endtime="20220801 13:37:45.836"/>
+</kw>
+<kw name="Fill Out Contact Us Form And Submit" library="keywords">
 <kw name="Input Text" library="Selenium2Library">
-<arg>${signup_name}</arg>
+<arg>${contact_name}</arg>
 <arg>${f_name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220731 22:01:44.188" level="INFO">Typing text 'Jhon' into text field 'xpath = //input [@name = 'name']'.</msg>
-<status status="PASS" starttime="20220731 22:01:44.188" endtime="20220731 22:01:44.509"/>
+<msg timestamp="20220801 13:37:45.837" level="INFO">Typing text 'Jhon' into text field 'xpath = //input[@data-qa='name']'.</msg>
+<status status="PASS" starttime="20220801 13:37:45.837" endtime="20220801 13:37:46.289"/>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
-<arg>${signup_email}</arg>
+<arg>${contact_email}</arg>
 <arg>${email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220731 22:01:44.509" level="INFO">Typing text 'jhon5@gmail.com' into text field 'xpath = //input [@data-qa = 'signup-email']'.</msg>
-<status status="PASS" starttime="20220731 22:01:44.509" endtime="20220731 22:01:44.613"/>
+<msg timestamp="20220801 13:37:46.290" level="INFO">Typing text 'jhon5@gmail.com' into text field 'xpath = //input[@data-qa='email']'.</msg>
+<status status="PASS" starttime="20220801 13:37:46.290" endtime="20220801 13:37:46.415"/>
 </kw>
-<kw name="Click Button" library="Selenium2Library">
-<arg>${signup_btn}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220731 22:01:44.613" level="INFO">Clicking button 'xpath = //button[@data-qa = 'signup-button']'.</msg>
-<status status="PASS" starttime="20220731 22:01:44.613" endtime="20220731 22:01:49.226"/>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${contact_subject}</arg>
+<arg>${contact_subject_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220801 13:37:46.416" level="INFO">Typing text 'Complain about product' into text field 'xpath = //input[@data-qa='subject']'.</msg>
+<status status="PASS" starttime="20220801 13:37:46.415" endtime="20220801 13:37:46.557"/>
 </kw>
-<status status="PASS" starttime="20220731 22:01:41.144" endtime="20220731 22:01:49.226"/>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${contact_message}</arg>
+<arg>${contact_message_text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220801 13:37:46.558" level="INFO">Typing text 'I would like to complain about product I've bought from your company' into text field 'xpath = //textarea[@data-qa='message']'.</msg>
+<status status="PASS" starttime="20220801 13:37:46.557" endtime="20220801 13:37:46.684"/>
 </kw>
-<kw name="Email &quot;Address is Already Registered Message&quot; Is Visible" library="keywords">
+<kw name="Choose File" library="Selenium2Library">
+<arg>${contact_upload_file}</arg>
+<arg>/Users/sefikkesim/Desktop/image.png</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20220801 13:37:46.684" level="INFO">Sending /Users/sefikkesim/Desktop/image.png to browser.</msg>
+<status status="PASS" starttime="20220801 13:37:46.684" endtime="20220801 13:37:47.984"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${contact_submit_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220801 13:37:47.984" level="INFO">Clicking element 'xpath = //input[@data-qa='submit-button']'.</msg>
+<status status="PASS" starttime="20220801 13:37:47.984" endtime="20220801 13:37:48.090"/>
+</kw>
+<kw name="Handle Alert" library="Selenium2Library">
+<arg>action=ACCEPT</arg>
+<arg>timeout=1</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<msg timestamp="20220801 13:37:48.090" level="INFO">HANDLE::&lt;class 'datetime.timedelta'&gt;::0:00:01</msg>
+<status status="PASS" starttime="20220801 13:37:48.090" endtime="20220801 13:37:48.117"/>
+</kw>
+<status status="PASS" starttime="20220801 13:37:45.836" endtime="20220801 13:37:48.117"/>
+</kw>
+<kw name="Verify That The Form is Submitted Successfully" library="keywords">
 <kw name="Element Should Be Visible" library="Selenium2Library">
-<arg>${email_already_exists_text}</arg>
+<arg>${contact_submit_success_message}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220731 22:01:49.337" level="INFO">Element 'xpath = //*[contains (text(),'Email Address already exist!')]' is displayed.</msg>
-<status status="PASS" starttime="20220731 22:01:49.227" endtime="20220731 22:01:49.339"/>
+<msg timestamp="20220801 13:37:48.513" level="INFO">Element 'xpath = (//*[contains(text(),'Success! Your details have been submitted successfully.')])[1]' is displayed.</msg>
+<status status="PASS" starttime="20220801 13:37:48.117" endtime="20220801 13:37:48.514"/>
 </kw>
-<status status="PASS" starttime="20220731 22:01:49.226" endtime="20220731 22:01:49.339"/>
+<status status="PASS" starttime="20220801 13:37:48.117" endtime="20220801 13:37:48.515"/>
+</kw>
+<kw name="Navigate To Home Page And Verify That Landed To Home Page" library="keywords">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${contact_home_page_link}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220801 13:37:48.518" level="INFO">Clicking element 'xpath = (//a[@href = '/'])[3]'.</msg>
+<status status="PASS" starttime="20220801 13:37:48.517" endtime="20220801 13:37:51.410"/>
+</kw>
+<kw name="Get Location" library="Selenium2Library">
+<var>${home_page_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20220801 13:37:51.413" level="INFO">${home_page_url} = https://automationexercise.com/</msg>
+<status status="PASS" starttime="20220801 13:37:51.410" endtime="20220801 13:37:51.413"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${home_page_url}</arg>
+<arg>${base_url}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20220801 13:37:51.414" endtime="20220801 13:37:51.414"/>
+</kw>
+<status status="PASS" starttime="20220801 13:37:48.515" endtime="20220801 13:37:51.414"/>
 </kw>
 <kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220731 22:01:49.340" endtime="20220731 22:01:49.422"/>
+<status status="PASS" starttime="20220801 13:37:51.414" endtime="20220801 13:37:51.499"/>
 </kw>
-<status status="PASS" starttime="20220731 22:01:33.180" endtime="20220731 22:01:49.422"/>
+<status status="PASS" starttime="20220801 13:37:30.911" endtime="20220801 13:37:51.499"/>
 </test>
-<status status="PASS" starttime="20220731 22:01:33.110" endtime="20220731 22:01:49.423"/>
+<status status="PASS" starttime="20220801 13:37:30.836" endtime="20220801 13:37:51.500"/>
 </suite>
-<status status="PASS" starttime="20220731 22:01:33.109" endtime="20220731 22:01:49.424"/>
+<status status="PASS" starttime="20220801 13:37:30.836" endtime="20220801 13:37:51.501"/>
 </suite>
-<status status="PASS" starttime="20220731 22:01:33.108" endtime="20220731 22:01:49.425"/>
+<status status="PASS" starttime="20220801 13:37:30.835" endtime="20220801 13:37:51.502"/>
 </suite>
-<status status="PASS" starttime="20220731 22:01:33.097" endtime="20220731 22:01:49.426"/>
+<status status="PASS" starttime="20220801 13:37:30.823" endtime="20220801 13:37:51.502"/>
 </suite>
 <statistics>
 <total>
@@ -93,8 +151,8 @@
 <suite>
 <stat pass="1" fail="0" skip="0" id="s1" name="UI Testing Robot framework">UI Testing Robot framework</stat>
 <stat pass="1" fail="0" skip="0" id="s1-s1" name="Test Cases">UI Testing Robot framework.Test Cases</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Test Case 5">UI Testing Robot framework.Test Cases.Test Case 5</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="Test Case 5">UI Testing Robot framework.Test Cases.Test Case 5.Test Case 5</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Test Case 6">UI Testing Robot framework.Test Cases.Test Case 6</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="Test Case 6">UI Testing Robot framework.Test Cases.Test Case 6.Test Case 6</stat>
 </suite>
 </statistics>
 <errors>
