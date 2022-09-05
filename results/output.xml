@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on darwin)" generated="20220905 21:34:20.839" rpa="false" schemaversion="3">
+<suite id="s1" name="UI Testing Robot framework" source="/Users/sefikkesim/Desktop/Robot Framework/UI_Testing_Robot_framework">
+<suite id="s1-s1" name="Test Cases" source="/Users/sefikkesim/Desktop/Robot Framework/UI_Testing_Robot_framework/test_cases">
+<suite id="s1-s1-s1" name="Test Case 9" source="/Users/sefikkesim/Desktop/Robot Framework/UI_Testing_Robot_framework/test_cases/test_case_9">
+<suite id="s1-s1-s1-s1" name="Test Case 9" source="/Users/sefikkesim/Desktop/Robot Framework/UI_Testing_Robot_framework/test_cases/test_case_9/test_case_9.robot">
+<test id="s1-s1-s1-s1-t1" name="Search Product" line="17">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Navigate The Website And Verify Home Page is Visible</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Navigate The Website And Verify Home Page is Visible" library="global_keywords">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${base_url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220905 21:34:20.943" level="INFO">Opening browser 'chrome' to base url 'https://automationexercise.com/'.</msg>
+<status status="PASS" starttime="20220905 21:34:20.942" endtime="20220905 21:34:30.418"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220905 21:34:30.419" endtime="20220905 21:34:30.796"/>
+</kw>
+<kw name="Get Location" library="Selenium2Library">
+<var>${url}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20220905 21:34:30.849" level="INFO">${url} = https://automationexercise.com/</msg>
+<status status="PASS" starttime="20220905 21:34:30.797" endtime="20220905 21:34:30.851"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${base_url}</arg>
+<arg>${url}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20220905 21:34:30.851" endtime="20220905 21:34:30.851"/>
+</kw>
+<status status="PASS" starttime="20220905 21:34:20.942" endtime="20220905 21:34:30.851"/>
+</kw>
+<status status="PASS" starttime="20220905 21:34:20.942" endtime="20220905 21:34:30.852"/>
+</kw>
+<kw name="Navigate To Product Page and Verify The Page Is Loaded" library="keywords">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${products_link}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220905 21:34:30.852" level="INFO">Clicking element 'xpath = //a[@href = '/products']'.</msg>
+<status status="PASS" starttime="20220905 21:34:30.852" endtime="20220905 21:34:35.637"/>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>${all_products_text}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220905 21:34:35.726" level="INFO">Element 'xpath = (//*[contains(text(),'All Products')])[2]' is displayed.</msg>
+<status status="PASS" starttime="20220905 21:34:35.637" endtime="20220905 21:34:35.727"/>
+</kw>
+<status status="PASS" starttime="20220905 21:34:30.852" endtime="20220905 21:34:35.727"/>
+</kw>
+<kw name="Search Product and Verify Results Are Visible" library="keywords">
+<kw name="Input Text" library="Selenium2Library">
+<arg>${search_product_box}</arg>
+<arg>cotton</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220905 21:34:35.727" level="INFO">Typing text 'cotton' into text field 'xpath = //input[@id = 'search_product']'.</msg>
+<status status="PASS" starttime="20220905 21:34:35.727" endtime="20220905 21:34:35.974"/>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<arg>${search_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220905 21:34:35.975" level="INFO">Clicking button 'xpath = //button [@id = 'submit_search']'.</msg>
+<status status="PASS" starttime="20220905 21:34:35.974" endtime="20220905 21:34:40.240"/>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>${searched_products_text}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220905 21:34:40.260" level="INFO">Element 'xpath = //*[contains(text(),'Searched Products')]' is displayed.</msg>
+<status status="PASS" starttime="20220905 21:34:40.240" endtime="20220905 21:34:40.262"/>
+</kw>
+<status status="PASS" starttime="20220905 21:34:35.727" endtime="20220905 21:34:40.262"/>
+</kw>
+<kw name="Verify All The Products Related To Search Are Visible" library="keywords">
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//div [@class = 'productinfo text-center']/p</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220905 21:34:40.263" level="INFO">${xpath} = //div [@class = 'productinfo text-center']/p</msg>
+<status status="PASS" starttime="20220905 21:34:40.263" endtime="20220905 21:34:40.266"/>
+</kw>
+<kw name="Get Element Count" library="Selenium2Library">
+<var>${count}</var>
+<arg>${xpath}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220905 21:34:40.333" level="INFO">${count} = 6</msg>
+<status status="PASS" starttime="20220905 21:34:40.266" endtime="20220905 21:34:40.334"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>${all_titles}</var>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20220905 21:34:40.335" level="INFO">${all_titles} = []</msg>
+<status status="PASS" starttime="20220905 21:34:40.335" endtime="20220905 21:34:40.336"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>1</value>
+<value>${count} + 1</value>
+<iter>
+<var name="${i}">1</var>
+<kw name="Get Text" library="Selenium2Library">
+<var>${product_title}</var>
+<arg>xpath=(${xpath})[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220905 21:34:40.367" level="INFO">${product_title} = Cotton Mull Embroidered Dress</msg>
+<status status="PASS" starttime="20220905 21:34:40.337" endtime="20220905 21:34:40.369"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${all_titles}</arg>
+<arg>${product_title}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220905 21:34:40.369" endtime="20220905 21:34:40.369"/>
+</kw>
+<status status="PASS" starttime="20220905 21:34:40.337" endtime="20220905 21:34:40.369"/>
+</iter>
+<iter>
+<var name="${i}">2</var>
+<kw name="Get Text" library="Selenium2Library">
+<var>${product_title}</var>
+<arg>xpath=(${xpath})[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220905 21:34:40.410" level="INFO">${product_title} = Blue Cotton Indie Mickey Dress</msg>
+<status status="PASS" starttime="20220905 21:34:40.370" endtime="20220905 21:34:40.412"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${all_titles}</arg>
+<arg>${product_title}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220905 21:34:40.412" endtime="20220905 21:34:40.412"/>
+</kw>
+<status status="PASS" starttime="20220905 21:34:40.369" endtime="20220905 21:34:40.412"/>
+</iter>
+<iter>
+<var name="${i}">3</var>
+<kw name="Get Text" library="Selenium2Library">
+<var>${product_title}</var>
+<arg>xpath=(${xpath})[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220905 21:34:40.432" level="INFO">${product_title} = Pure Cotton V-Neck T-Shirt</msg>
+<status status="PASS" starttime="20220905 21:34:40.412" endtime="20220905 21:34:40.433"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${all_titles}</arg>
+<arg>${product_title}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220905 21:34:40.433" endtime="20220905 21:34:40.434"/>
+</kw>
+<status status="PASS" starttime="20220905 21:34:40.412" endtime="20220905 21:34:40.434"/>
+</iter>
+<iter>
+<var name="${i}">4</var>
+<kw name="Get Text" library="Selenium2Library">
+<var>${product_title}</var>
+<arg>xpath=(${xpath})[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220905 21:34:40.456" level="INFO">${product_title} = Pure Cotton Neon Green Tshirt</msg>
+<status status="PASS" starttime="20220905 21:34:40.434" endtime="20220905 21:34:40.458"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${all_titles}</arg>
+<arg>${product_title}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220905 21:34:40.458" endtime="20220905 21:34:40.459"/>
+</kw>
+<status status="PASS" starttime="20220905 21:34:40.434" endtime="20220905 21:34:40.459"/>
+</iter>
+<iter>
+<var name="${i}">5</var>
+<kw name="Get Text" library="Selenium2Library">
+<var>${product_title}</var>
+<arg>xpath=(${xpath})[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220905 21:34:41.425" level="INFO">${product_title} = Cotton Silk Hand Block Print Saree</msg>
+<status status="PASS" starttime="20220905 21:34:40.459" endtime="20220905 21:34:41.426"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${all_titles}</arg>
+<arg>${product_title}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220905 21:34:41.427" endtime="20220905 21:34:41.427"/>
+</kw>
+<status status="PASS" starttime="20220905 21:34:40.459" endtime="20220905 21:34:41.427"/>
+</iter>
+<iter>
+<var name="${i}">6</var>
+<kw name="Get Text" library="Selenium2Library">
+<var>${product_title}</var>
+<arg>xpath=(${xpath})[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220905 21:34:41.772" level="INFO">${product_title} = Beautiful Peacock Blue Cotton Linen Saree</msg>
+<status status="PASS" starttime="20220905 21:34:41.428" endtime="20220905 21:34:41.773"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${all_titles}</arg>
+<arg>${product_title}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220905 21:34:41.773" endtime="20220905 21:34:41.773"/>
+</kw>
+<status status="PASS" starttime="20220905 21:34:41.428" endtime="20220905 21:34:41.773"/>
+</iter>
+<status status="PASS" starttime="20220905 21:34:40.337" endtime="20220905 21:34:41.773"/>
+</for>
+<for flavor="IN">
+<var>${title}</var>
+<value>${all_titles}</value>
+<iter>
+<var name="${title}">['Cotton Mull Embroidered Dress', 'Blue Cotton Indie Mickey Dress', 'Pure Cotton V-Neck T-Shirt', 'Pure Cotton Neon Green Tshirt', 'Cotton Silk Hand Block Print Saree', 'Beautiful Peacock Blue Cotton ...</var>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${product_title}</arg>
+<arg>Cotton</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20220905 21:34:41.774" endtime="20220905 21:34:41.774"/>
+</kw>
+<status status="PASS" starttime="20220905 21:34:41.774" endtime="20220905 21:34:41.774"/>
+</iter>
+<status status="PASS" starttime="20220905 21:34:41.773" endtime="20220905 21:34:41.774"/>
+</for>
+<status status="PASS" starttime="20220905 21:34:40.263" endtime="20220905 21:34:41.774"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220905 21:34:41.774" endtime="20220905 21:34:41.864"/>
+</kw>
+<status status="PASS" starttime="20220905 21:34:20.941" endtime="20220905 21:34:41.864"/>
+</test>
+<status status="PASS" starttime="20220905 21:34:20.854" endtime="20220905 21:34:41.866"/>
+</suite>
+<status status="PASS" starttime="20220905 21:34:20.853" endtime="20220905 21:34:41.867"/>
+</suite>
+<status status="PASS" starttime="20220905 21:34:20.852" endtime="20220905 21:34:41.868"/>
+</suite>
+<status status="PASS" starttime="20220905 21:34:20.841" endtime="20220905 21:34:41.870"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="UI Testing Robot framework">UI Testing Robot framework</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Test Cases">UI Testing Robot framework.Test Cases</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Test Case 9">UI Testing Robot framework.Test Cases.Test Case 9</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="Test Case 9">UI Testing Robot framework.Test Cases.Test Case 9.Test Case 9</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
