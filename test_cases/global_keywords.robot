@@ -1,6 +1,7 @@
 *** Keywords ***
 Navigate The Website And Verify Home Page is Visible
     Open Browser   ${base_url}       ${browser} 
+    Maximize Browser Window
     ${url}  Get Location 
     Should Be Equal      ${base_url}     ${url}
 
