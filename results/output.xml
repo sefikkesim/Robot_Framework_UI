@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on darwin)" generated="20220906 11:55:51.504" rpa="false" schemaversion="3">
+<suite id="s1" name="UI Testing Robot framework" source="/Users/sefikkesim/Desktop/Robot Framework/UI_Testing_Robot_framework">
+<suite id="s1-s1" name="Test Cases" source="/Users/sefikkesim/Desktop/Robot Framework/UI_Testing_Robot_framework/test_cases">
+<suite id="s1-s1-s1" name="Test Case 12" source="/Users/sefikkesim/Desktop/Robot Framework/UI_Testing_Robot_framework/test_cases/test_case_12">
+<suite id="s1-s1-s1-s1" name="Test Case 12" source="/Users/sefikkesim/Desktop/Robot Framework/UI_Testing_Robot_framework/test_cases/test_case_12/test_case_12.robot">
+<test id="s1-s1-s1-s1-t1" name="Add Products in Cart" line="17">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Navigate The Website And Verify Home Page is Visible</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Navigate The Website And Verify Home Page is Visible" library="global_keywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${base_url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220906 11:55:51.600" level="INFO">Opening browser 'chrome' to base url 'https://automationexercise.com/'.</msg>
+<status status="PASS" starttime="20220906 11:55:51.600" endtime="20220906 11:55:57.951"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220906 11:55:57.951" endtime="20220906 11:55:58.417"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${url}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20220906 11:55:58.424" level="INFO">${url} = https://automationexercise.com/</msg>
+<status status="PASS" starttime="20220906 11:55:58.417" endtime="20220906 11:55:58.425"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${base_url}</arg>
+<arg>${url}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20220906 11:55:58.426" endtime="20220906 11:55:58.426"/>
+</kw>
+<status status="PASS" starttime="20220906 11:55:51.599" endtime="20220906 11:55:58.426"/>
+</kw>
+<status status="PASS" starttime="20220906 11:55:51.599" endtime="20220906 11:55:58.426"/>
+</kw>
+<kw name="Navigate To Product Page" library="keywords">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${products_link}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20220906 11:55:58.427" level="INFO">Clicking link 'xpath = //a[@href = '/products']'.</msg>
+<status status="PASS" starttime="20220906 11:55:58.427" endtime="20220906 11:56:04.045"/>
+</kw>
+<status status="PASS" starttime="20220906 11:55:58.426" endtime="20220906 11:56:04.046"/>
+</kw>
+<kw name="Hover Over First Product And Click Add To Cart Button" library="keywords">
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${all_products}</var>
+<arg>xpath=//div [@class = 'product-image-wrapper']</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20220906 11:56:04.072" level="INFO">${all_products} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="2ff8a36dd879518e53fd0e7ce74c8be0", element="ac5d6310-7e49-493e-af90-f1e2d34b3e02")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20220906 11:56:04.047" endtime="20220906 11:56:04.073"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${all_products[0]}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220906 11:56:04.074" level="INFO">Simulating Mouse Over on element '&lt;selenium.webdriver.remote.webelement.WebElement (session="2ff8a36dd879518e53fd0e7ce74c8be0", element="ac5d6310-7e49-493e-af90-f1e2d34b3e02")&gt;'.</msg>
+<status status="PASS" starttime="20220906 11:56:04.073" endtime="20220906 11:56:04.397"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${add_to_cart_btn_first_product}</var>
+<arg>xpath= //a [@data-product-id= '1']</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20220906 11:56:04.405" level="INFO">${add_to_cart_btn_first_product} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="2ff8a36dd879518e53fd0e7ce74c8be0", element="87e58b1e-1496-4da4-b7b0-4bb5f1f2d80f")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20220906 11:56:04.397" endtime="20220906 11:56:04.405"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${all_products[4]}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220906 11:56:04.405" endtime="20220906 11:56:04.746"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${add_to_cart_btn_first_product[1]}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220906 11:56:04.746" endtime="20220906 11:56:04.771"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${add_to_cart_btn_first_product[1]}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20220906 11:56:04.771" level="INFO">Clicking link '&lt;selenium.webdriver.remote.webelement.WebElement (session="2ff8a36dd879518e53fd0e7ce74c8be0", element="f617250e-683d-4141-88d1-1f64c5064b8f")&gt;'.</msg>
+<status status="PASS" starttime="20220906 11:56:04.771" endtime="20220906 11:56:04.807"/>
+</kw>
+<status status="PASS" starttime="20220906 11:56:04.046" endtime="20220906 11:56:04.808"/>
+</kw>
+<kw name="Click Continue Shopping Button" library="keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${continue_shopping_btn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220906 11:56:04.808" endtime="20220906 11:56:05.280"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${continue_shopping_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220906 11:56:05.280" level="INFO">Clicking element 'xpath= //button[@data-dismiss= 'modal']'.</msg>
+<status status="PASS" starttime="20220906 11:56:05.280" endtime="20220906 11:56:05.362"/>
+</kw>
+<status status="PASS" starttime="20220906 11:56:04.808" endtime="20220906 11:56:05.362"/>
+</kw>
+<kw name="Hover Over Second Product And Click Add To Cart Button" library="keywords">
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${all_products}</var>
+<arg>xpath=//div [@class = 'product-image-wrapper']</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20220906 11:56:05.369" level="INFO">${all_products} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="2ff8a36dd879518e53fd0e7ce74c8be0", element="ac5d6310-7e49-493e-af90-f1e2d34b3e02")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20220906 11:56:05.362" endtime="20220906 11:56:05.370"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${all_products[1]}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220906 11:56:05.371" level="INFO">Simulating Mouse Over on element '&lt;selenium.webdriver.remote.webelement.WebElement (session="2ff8a36dd879518e53fd0e7ce74c8be0", element="c041c51a-660a-4ad7-8537-c59237310684")&gt;'.</msg>
+<status status="PASS" starttime="20220906 11:56:05.370" endtime="20220906 11:56:05.645"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${add_to_cart_btn_second_product}</var>
+<arg>xpath= //a [@data-product-id= '2']</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20220906 11:56:05.653" level="INFO">${add_to_cart_btn_second_product} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="2ff8a36dd879518e53fd0e7ce74c8be0", element="ed226275-8a5a-4d33-bbf2-3d076cbdf1b9")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20220906 11:56:05.645" endtime="20220906 11:56:05.654"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${add_to_cart_btn_second_product[1]}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220906 11:56:05.654" endtime="20220906 11:56:05.675"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${add_to_cart_btn_second_product[1]}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20220906 11:56:05.676" level="INFO">Clicking link '&lt;selenium.webdriver.remote.webelement.WebElement (session="2ff8a36dd879518e53fd0e7ce74c8be0", element="ac93fba3-3958-4eab-9e37-6002e05460f0")&gt;'.</msg>
+<status status="PASS" starttime="20220906 11:56:05.675" endtime="20220906 11:56:05.700"/>
+</kw>
+<status status="PASS" starttime="20220906 11:56:05.362" endtime="20220906 11:56:05.700"/>
+</kw>
+<kw name="Click View Cart Button" library="keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${view_cart_btn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220906 11:56:05.701" endtime="20220906 11:56:07.319"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${view_cart_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220906 11:56:07.319" level="INFO">Clicking element 'xpath= //* [contains (text(), 'View Cart')]'.</msg>
+<status status="PASS" starttime="20220906 11:56:07.319" endtime="20220906 11:56:09.119"/>
+</kw>
+<status status="PASS" starttime="20220906 11:56:05.700" endtime="20220906 11:56:09.119"/>
+</kw>
+<kw name="Verify Both Products Are Added To Cart" library="keywords">
+<kw name="Set Variable" library="BuiltIn">
+<var>${xpath}</var>
+<arg>//tbody/tr</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220906 11:56:09.120" level="INFO">${xpath} = //tbody/tr</msg>
+<status status="PASS" starttime="20220906 11:56:09.120" endtime="20220906 11:56:09.121"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>${xpath}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220906 11:56:09.132" level="INFO">${count} = 2</msg>
+<status status="PASS" starttime="20220906 11:56:09.121" endtime="20220906 11:56:09.134"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>${products_in_cart}</var>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20220906 11:56:09.134" level="INFO">${products_in_cart} = []</msg>
+<status status="PASS" starttime="20220906 11:56:09.134" endtime="20220906 11:56:09.136"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>1</value>
+<value>${count} + 1</value>
+<iter>
+<var name="${i}">1</var>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${id}</var>
+<arg>xpath= (${xpath})[${i}]</arg>
+<arg>id</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20220906 11:56:09.891" level="INFO">${id} = product-1</msg>
+<status status="PASS" starttime="20220906 11:56:09.137" endtime="20220906 11:56:09.892"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${products_in_cart}</arg>
+<arg>${id}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220906 11:56:09.892" endtime="20220906 11:56:09.892"/>
+</kw>
+<status status="PASS" starttime="20220906 11:56:09.137" endtime="20220906 11:56:09.892"/>
+</iter>
+<iter>
+<var name="${i}">2</var>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${id}</var>
+<arg>xpath= (${xpath})[${i}]</arg>
+<arg>id</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20220906 11:56:09.906" level="INFO">${id} = product-2</msg>
+<status status="PASS" starttime="20220906 11:56:09.892" endtime="20220906 11:56:09.907"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${products_in_cart}</arg>
+<arg>${id}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20220906 11:56:09.907" endtime="20220906 11:56:09.907"/>
+</kw>
+<status status="PASS" starttime="20220906 11:56:09.892" endtime="20220906 11:56:09.908"/>
+</iter>
+<status status="PASS" starttime="20220906 11:56:09.136" endtime="20220906 11:56:09.908"/>
+</for>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${products_in_cart[0]}</arg>
+<arg>product-1</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220906 11:56:09.908" endtime="20220906 11:56:09.908"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${products_in_cart[1]}</arg>
+<arg>product-2</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220906 11:56:09.908" endtime="20220906 11:56:09.909"/>
+</kw>
+<status status="PASS" starttime="20220906 11:56:09.120" endtime="20220906 11:56:09.909"/>
+</kw>
+<kw name="Verify Prices Of Products" library="keywords">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${price_of_first_product}</var>
+<arg>xpath=//tbody/tr[1]/td[3]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220906 11:56:09.934" level="INFO">${price_of_first_product} = Rs. 500</msg>
+<status status="PASS" starttime="20220906 11:56:09.909" endtime="20220906 11:56:09.935"/>
+</kw>
+<kw name="Get Substring" library="String">
+<var>${price_1}</var>
+<arg>${price_of_first_product}</arg>
+<arg>4</arg>
+<arg>7</arg>
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<msg timestamp="20220906 11:56:09.936" level="INFO">${price_1} = 500</msg>
+<status status="PASS" starttime="20220906 11:56:09.936" endtime="20220906 11:56:09.936"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${price_1}</arg>
+<arg>500</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220906 11:56:09.937" endtime="20220906 11:56:09.937"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${price_of_second_product}</var>
+<arg>xpath=//tbody/tr[2]/td[3]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220906 11:56:09.956" level="INFO">${price_of_second_product} = Rs. 400</msg>
+<status status="PASS" starttime="20220906 11:56:09.937" endtime="20220906 11:56:09.956"/>
+</kw>
+<kw name="Get Substring" library="String">
+<var>${price_2}</var>
+<arg>${price_of_second_product}</arg>
+<arg>4</arg>
+<arg>7</arg>
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<msg timestamp="20220906 11:56:09.957" level="INFO">${price_2} = 400</msg>
+<status status="PASS" starttime="20220906 11:56:09.957" endtime="20220906 11:56:09.958"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${price_2}</arg>
+<arg>400</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220906 11:56:09.958" endtime="20220906 11:56:09.958"/>
+</kw>
+<status status="PASS" starttime="20220906 11:56:09.909" endtime="20220906 11:56:09.958"/>
+</kw>
+<kw name="Verify Quantities Of Products" library="keywords">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${quantity_of_first_product}</var>
+<arg>xpath=//tbody/tr[1]/td[4]/button</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220906 11:56:09.977" level="INFO">${quantity_of_first_product} = 1</msg>
+<status status="PASS" starttime="20220906 11:56:09.958" endtime="20220906 11:56:09.978"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${quantity_of_first_product}</arg>
+<arg>1</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220906 11:56:09.978" endtime="20220906 11:56:09.979"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${quantity_of_second_product}</var>
+<arg>xpath=//tbody/tr[2]/td[4]/button</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220906 11:56:09.996" level="INFO">${quantity_of_second_product} = 1</msg>
+<status status="PASS" starttime="20220906 11:56:09.979" endtime="20220906 11:56:09.997"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${quantity_of_second_product}</arg>
+<arg>1</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220906 11:56:09.997" endtime="20220906 11:56:09.997"/>
+</kw>
+<status status="PASS" starttime="20220906 11:56:09.958" endtime="20220906 11:56:09.997"/>
+</kw>
+<kw name="Verify Total Prices Of Products" library="keywords">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${total_price_of_first_product}</var>
+<arg>xpath=//tbody/tr[1]/td[5]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220906 11:56:10.015" level="INFO">${total_price_of_first_product} = Rs. 500</msg>
+<status status="PASS" starttime="20220906 11:56:09.998" endtime="20220906 11:56:10.016"/>
+</kw>
+<kw name="Get Substring" library="String">
+<var>${total_price_1}</var>
+<arg>${total_price_of_first_product}</arg>
+<arg>4</arg>
+<arg>7</arg>
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<msg timestamp="20220906 11:56:10.016" level="INFO">${total_price_1} = 500</msg>
+<status status="PASS" starttime="20220906 11:56:10.016" endtime="20220906 11:56:10.017"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${total_price_1}</arg>
+<arg>500</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220906 11:56:10.018" endtime="20220906 11:56:10.018"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${total_price_of_second_product}</var>
+<arg>xpath=//tbody/tr[2]/td[5]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220906 11:56:10.035" level="INFO">${total_price_of_second_product} = Rs. 400</msg>
+<status status="PASS" starttime="20220906 11:56:10.018" endtime="20220906 11:56:10.036"/>
+</kw>
+<kw name="Get Substring" library="String">
+<var>${total_price_2}</var>
+<arg>${total_price_of_second_product}</arg>
+<arg>4</arg>
+<arg>7</arg>
+<doc>Returns a substring from ``start`` index to ``end`` index.</doc>
+<msg timestamp="20220906 11:56:10.037" level="INFO">${total_price_2} = 400</msg>
+<status status="PASS" starttime="20220906 11:56:10.036" endtime="20220906 11:56:10.038"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${total_price_2}</arg>
+<arg>400</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220906 11:56:10.038" endtime="20220906 11:56:10.039"/>
+</kw>
+<status status="PASS" starttime="20220906 11:56:09.997" endtime="20220906 11:56:10.039"/>
+</kw>
+<status status="PASS" starttime="20220906 11:55:51.599" endtime="20220906 11:56:10.039"/>
+</test>
+<status status="PASS" starttime="20220906 11:55:51.519" endtime="20220906 11:56:10.041"/>
+</suite>
+<status status="PASS" starttime="20220906 11:55:51.518" endtime="20220906 11:56:10.044"/>
+</suite>
+<status status="PASS" starttime="20220906 11:55:51.517" endtime="20220906 11:56:10.046"/>
+</suite>
+<status status="PASS" starttime="20220906 11:55:51.505" endtime="20220906 11:56:10.047"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="UI Testing Robot framework">UI Testing Robot framework</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Test Cases">UI Testing Robot framework.Test Cases</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Test Case 12">UI Testing Robot framework.Test Cases.Test Case 12</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="Test Case 12">UI Testing Robot framework.Test Cases.Test Case 12.Test Case 12</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
