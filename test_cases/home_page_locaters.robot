@@ -3,5 +3,8 @@ ${login_link}        xpath = //a[@href = '/login']
 ${contact_us_link}   xpath = //a[@href = '/contact_us']
 ${test_cases_link}   xpath = //a[@href = '/test_cases']
 ${products_link}    xpath = //a[@href = '/products']
-
-
+${footer}           xpath = //footer[@id = 'footer']
+${subscription_text}   xpath=//*[contains(text(),'Subscription')]
+${subscription_email_input}   xpath=//input[@id = 'susbscribe_email']
+${subscription_email_submit_btn}   xpath=//button[@id = 'subscribe']
+${subscription_email_succ_msg}   xpath=//*[contains(text(),'You have been successfully subscribed!')]

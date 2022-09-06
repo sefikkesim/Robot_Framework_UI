@@ -9,7 +9,7 @@ Search Product and Verify Results Are Visible
     Element Should Be Visible 	  ${searched_products_text}
 
 Verify All The Products Related To Search Are Visible
-      ${xpath}=  Set Variable 	 //div [@class = 'productinfo text-center']/p 
+    ${xpath}=  Set Variable 	 //div [@class = 'productinfo text-center']/p 
     ${count}=  Get Element Count   ${xpath}
     ${all_titles}=  Create List
     FOR  ${i}   IN RANGE  1  ${count} + 1
