@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on darwin)" generated="20220908 11:15:08.641" rpa="false" schemaversion="3">
+<suite id="s1" name="UI Testing Robot framework" source="/Users/sefikkesim/Desktop/Robot Framework/UI_Testing_Robot_framework">
+<suite id="s1-s1" name="Test Cases" source="/Users/sefikkesim/Desktop/Robot Framework/UI_Testing_Robot_framework/test_cases">
+<suite id="s1-s1-s1" name="Test Case 13" source="/Users/sefikkesim/Desktop/Robot Framework/UI_Testing_Robot_framework/test_cases/test_case_13">
+<suite id="s1-s1-s1-s1" name="Test Case 13" source="/Users/sefikkesim/Desktop/Robot Framework/UI_Testing_Robot_framework/test_cases/test_case_13/test_case_13.robot">
+<test id="s1-s1-s1-s1-t1" name="Verify Product Quantity In Cart" line="16">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Navigate The Website And Verify Home Page is Visible</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Navigate The Website And Verify Home Page is Visible" library="global_keywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${base_url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220908 11:15:08.735" level="INFO">Opening browser 'chrome' to base url 'https://automationexercise.com/'.</msg>
+<status status="PASS" starttime="20220908 11:15:08.735" endtime="20220908 11:15:17.648"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220908 11:15:17.648" endtime="20220908 11:15:17.861"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${url}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20220908 11:15:17.872" level="INFO">${url} = https://automationexercise.com/</msg>
+<status status="PASS" starttime="20220908 11:15:17.861" endtime="20220908 11:15:17.873"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${base_url}</arg>
+<arg>${url}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20220908 11:15:17.873" endtime="20220908 11:15:17.874"/>
+</kw>
+<status status="PASS" starttime="20220908 11:15:08.735" endtime="20220908 11:15:17.874"/>
+</kw>
+<status status="PASS" starttime="20220908 11:15:08.734" endtime="20220908 11:15:17.874"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${all_products_view_button}</var>
+<arg>xpath= //div[@class = 'choose']</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20220908 11:15:17.983" level="INFO">${all_products_view_button} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="18139f403e1c0051307700cc10c01dae", element="934790c7-cc89-4c9d-ae73-f96027da2f3d")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20220908 11:15:17.874" endtime="20220908 11:15:17.984"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${all_products_view_button[5]}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220908 11:15:17.985" endtime="20220908 11:15:21.866"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${all_products_view_button[2]}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220908 11:15:21.867" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="18139f403e1c0051307700cc10c01dae", element="de1899ff-53e4-4045-baed-7b3e1406db92")&gt;'.</msg>
+<status status="PASS" starttime="20220908 11:15:21.866" endtime="20220908 11:15:35.693"/>
+</kw>
+<kw name="Location Should Contain" library="SeleniumLibrary">
+<arg>product_details</arg>
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<msg timestamp="20220908 11:15:35.696" level="INFO">Current location contains 'product_details'.</msg>
+<status status="PASS" starttime="20220908 11:15:35.693" endtime="20220908 11:15:35.697"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById('quantity').setAttribute('value','4')</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220908 11:15:35.698" level="INFO">Executing JavaScript:
+document.getElementById('quantity').setAttribute('value','4')
+Without any arguments.</msg>
+<status status="PASS" starttime="20220908 11:15:35.697" endtime="20220908 11:15:35.711"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${add_to_cart_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220908 11:15:35.711" level="INFO">Clicking button 'xpath= //button[@type = 'button']'.</msg>
+<status status="PASS" starttime="20220908 11:15:35.711" endtime="20220908 11:15:36.598"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${view_cart_btn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220908 11:15:36.598" endtime="20220908 11:15:37.308"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${view_cart_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220908 11:15:37.309" level="INFO">Clicking element 'xpath= //* [contains (text(), 'View Cart')]'.</msg>
+<status status="PASS" starttime="20220908 11:15:37.308" endtime="20220908 11:15:39.384"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${product_quantity}</var>
+<arg>xpath=//tbody/tr/td[4]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220908 11:15:39.416" level="INFO">${product_quantity} = 4</msg>
+<status status="PASS" starttime="20220908 11:15:39.384" endtime="20220908 11:15:39.416"/>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<arg>${product_quantity}</arg>
+<arg>4</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" starttime="20220908 11:15:39.417" endtime="20220908 11:15:39.417"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220908 11:15:39.417" endtime="20220908 11:15:39.503"/>
+</kw>
+<status status="PASS" starttime="20220908 11:15:08.728" endtime="20220908 11:15:39.503"/>
+</test>
+<status status="PASS" starttime="20220908 11:15:08.655" endtime="20220908 11:15:39.504"/>
+</suite>
+<status status="PASS" starttime="20220908 11:15:08.654" endtime="20220908 11:15:39.505"/>
+</suite>
+<status status="PASS" starttime="20220908 11:15:08.653" endtime="20220908 11:15:39.506"/>
+</suite>
+<status status="PASS" starttime="20220908 11:15:08.643" endtime="20220908 11:15:39.506"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="UI Testing Robot framework">UI Testing Robot framework</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Test Cases">UI Testing Robot framework.Test Cases</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Test Case 13">UI Testing Robot framework.Test Cases.Test Case 13</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="Test Case 13">UI Testing Robot framework.Test Cases.Test Case 13.Test Case 13</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

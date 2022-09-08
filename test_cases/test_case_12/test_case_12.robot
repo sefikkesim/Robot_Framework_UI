@@ -11,7 +11,7 @@ Resource                  ../global_keywords.robot
 Resource                   keywords.robot
 
 Test Setup         Run keywords   Navigate The Website And Verify Home Page is Visible
-# Test Teardown      Close Browser
+Test Teardown      Close Browser
 
 *** Test Case ***
 Add Products in Cart 
