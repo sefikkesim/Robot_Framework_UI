@@ -1,7 +1,7 @@
 *** Settings ***
  
 
-Resource                  ../variables.robot
+Resource                  ../variable.robot
 Resource                  ../test_data.robot
 Resource                  ../signup_page_locaters.robot
 Resource                  ../home_page_locaters.robot
