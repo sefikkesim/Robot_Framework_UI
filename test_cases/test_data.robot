@@ -1,4 +1,4 @@
-*** Variable ***
+*** Variables ***
 ${f_name}        Jhon 
 ${l_name}        Smith
 ${pass}         123456

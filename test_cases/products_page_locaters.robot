@@ -1,4 +1,4 @@
-*** Variable ***
+*** Variables ***
 ${all_products_text}             xpath = (//*[contains(text(),'All Products')])[2]
 ${first_product_view}            partial link=View Product
 ${search_product_box}            xpath = //input[@id = 'search_product']

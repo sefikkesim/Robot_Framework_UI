@@ -1,4 +1,4 @@
-*** Variable ***
+*** Variables ***
 ${login_email}   xpath = //input[@data-qa = 'login-email']
 ${login_password}   xpath = //input[@data-qa = 'login-password']
 ${login_button}   xpath = //button[@data-qa = 'login-button']

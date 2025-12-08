@@ -1,4 +1,4 @@
-*** Variable ***
+*** Variables ***
 ${get_in_touch_text}   xpath = //*[contains(text(),'Get In Touch')]
 ${contact_name}     xpath = //input[@data-qa='name']
 ${contact_email}    xpath = //input[@data-qa='email']

@@ -1,4 +1,4 @@
-*** Variable ***
+*** Variables ***
 ${new_user_signup_text}     xpath = //*[contains(text(),'New User Signup!')]
 ${signup_name}   xpath = //input [@name = 'name']
 ${signup_email}   xpath = //input [@data-qa = 'signup-email']
