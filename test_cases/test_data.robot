@@ -13,7 +13,7 @@ ${state_name}       Texas
 ${city_name}        Texas city
 ${zipcode_number}        22222
 ${mobile_number_number}        123456789
-${contact_subject_name}         Complain about product
+${contact_subject_name}         Complain about product that has been bought a couple months ago
 ${contact_message_text}         I would like to complain about product I've bought from your company
 
 
