@@ -1,8 +1,7 @@
 *** Settings ***
+ 
 
-Library     Selenium2Library 
-
-Resource                  ../variable.robot
+Resource                  ../variables.robot
 Resource                  ../test_data.robot
 Resource                  ../signup_page_locaters.robot
 Resource                  ../home_page_locaters.robot
