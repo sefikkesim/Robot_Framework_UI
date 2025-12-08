@@ -13,6 +13,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Remove preinstalled ChromeDriver (important)
+        run: |
+          sudo apt-get remove -y chromium-browser chromium-chromedriver || true
+          sudo rm -f /usr/bin/chromedriver || true
+
       - name: Install Google Chrome
         run: |
           sudo apt-get update
