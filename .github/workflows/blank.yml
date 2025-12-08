@@ -28,4 +28,4 @@ jobs:
 
       - name: Run Robot Framework Tests
         run: |
-          robot -d results tests/   # adjust folder name if your tests are elsewhere
+          robot -d results test_cases/test_case_1/test_case1.robot  # adjust folder name if your tests are elsewhere
