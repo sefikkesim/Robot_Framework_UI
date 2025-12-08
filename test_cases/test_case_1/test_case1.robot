@@ -1,5 +1,8 @@
 *** Settings ***
-Library                  robotframework-seleniumlibrary
+
+
+Library                   SeleniumLibrary
+
 
 Resource                  ../variable.robot
 Resource                  ../test_data.robot
