@@ -1,5 +1,5 @@
 *** Settings ***
- 
+Library                  robotframework-seleniumlibrary
 
 Resource                  ../variable.robot
 Resource                  ../test_data.robot
@@ -12,7 +12,7 @@ Resource                  keywords.robot
 Test Setup         Run keywords   Navigate The Website And Verify Home Page is Visible
 Test Teardown      Close Browser
 
-*** Test Case ***
+*** Test Cases ***
 Reagister User
     Input User Information And Click Signup Button 
     Fill Out Register Form And Create A New Account
