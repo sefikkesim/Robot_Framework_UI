@@ -52,7 +52,7 @@ jobs:
       #     path: results/
 
       - name: Deploy Robot Report to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v7
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./results
