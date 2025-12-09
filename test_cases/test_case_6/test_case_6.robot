@@ -1,6 +1,6 @@
 *** Settings ***
 
-Library    Selenium2Library 
+Library                  SeleniumLibrary 
 
 Resource                  ../variable.robot
 Resource                  ../test_data.robot
@@ -12,7 +12,7 @@ Resource                   keywords.robot
 Test Setup         Run keywords   Navigate The Website And Verify Home Page is Visible
 Test Teardown      Close Browser
 
-*** Test Case ***
+*** Test Cases ***
 Contact Us Form
     Navigate To Contact Us Page And Verify That Landed To Contact Us Page
     Fill Out Contact Us Form And Submit	 
