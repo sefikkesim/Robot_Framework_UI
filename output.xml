@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.10.19 on linux)" generated="2025-12-09T20:17:20.019467" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Case 6" source="/home/runner/work/Robot_Framework_UI/Robot_Framework_UI/test_cases/test_case_6/test_case_6.robot">
+<test id="s1-t1" name="Contact Us Form" line="16">
+<kw name="Run Keywords" owner="BuiltIn" type="SETUP">
+<kw name="Navigate The Website And Verify Home Page is Visible" owner="global_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-12-09T20:17:20.245328" level="INFO">Opening browser 'headlesschrome' to base url 'https://automationexercise.com/'.</msg>
+<arg>${base_url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-12-09T20:17:20.244995" elapsed="3.311523"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-12-09T20:17:23.556836" elapsed="0.015202"/>
+</kw>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2025-12-09T20:17:23.577770" level="INFO">${url} = https://automationexercise.com/</msg>
+<var>${url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2025-12-09T20:17:23.572415" elapsed="0.005411"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${base_url}</arg>
+<arg>${url}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-12-09T20:17:23.578029" elapsed="0.000358"/>
+</kw>
+<status status="PASS" start="2025-12-09T20:17:20.244690" elapsed="3.333804"/>
+</kw>
+<arg>Navigate The Website And Verify Home Page is Visible</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2025-12-09T20:17:20.244366" elapsed="3.334201"/>
+</kw>
+<kw name="Navigate To Contact Us Page And Verify That Landed To Contact Us Page" owner="keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-09T20:17:23.579548" level="INFO">Clicking element 'xpath = //a[@href = '/contact_us']'.</msg>
+<arg>${contact_us_link}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-09T20:17:23.579131" elapsed="0.491017"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-12-09T20:17:24.115360" level="INFO">Element 'xpath = //*[contains(text(),'Get In Touch')]' is displayed.</msg>
+<arg>${get_in_touch_text}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-09T20:17:24.070464" elapsed="0.045092"/>
+</kw>
+<status status="PASS" start="2025-12-09T20:17:23.578810" elapsed="0.536957"/>
+</kw>
+<kw name="Fill Out Contact Us Form And Submit" owner="keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-09T20:17:24.117241" level="INFO">Typing text 'Jhon' into text field 'xpath = //input[@data-qa='name']'.</msg>
+<arg>${contact_name}</arg>
+<arg>${f_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-09T20:17:24.116701" elapsed="0.117493"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-09T20:17:24.235100" level="INFO">Typing text 'jhon5@gmail.com' into text field 'xpath = //input[@data-qa='email']'.</msg>
+<arg>${contact_email}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-09T20:17:24.234528" elapsed="0.069740"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-09T20:17:24.304998" level="INFO">Typing text 'Complain about product that has been bought a couple months ago' into text field 'xpath = //input[@data-qa='subject']'.</msg>
+<arg>${contact_subject}</arg>
+<arg>${contact_subject_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-09T20:17:24.304579" elapsed="0.096357"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-09T20:17:24.401663" level="INFO">Typing text 'I would like to complain about product I've bought from your company' into text field 'xpath = //textarea[@data-qa='message']'.</msg>
+<arg>${contact_message}</arg>
+<arg>${contact_message_text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-09T20:17:24.401265" elapsed="0.113445"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-09T20:17:24.515767" level="INFO">Clicking element 'xpath = //input[@data-qa='submit-button']'.</msg>
+<arg>${contact_submit_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-09T20:17:24.515228" elapsed="0.156711"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2025-12-09T20:17:24.672789" level="INFO">HANDLE::&lt;class 'datetime.timedelta'&gt;::0:00:01</msg>
+<arg>action=ACCEPT</arg>
+<arg>timeout=1</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2025-12-09T20:17:24.672328" elapsed="0.034812"/>
+</kw>
+<status status="PASS" start="2025-12-09T20:17:24.116197" elapsed="0.591189"/>
+</kw>
+<kw name="Verify That The Form is Submitted Successfully" owner="keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-12-09T20:17:24.728692" level="INFO">Element 'xpath = (//*[contains(text(),'Success! Your details have been submitted successfully.')])[1]' is displayed.</msg>
+<arg>${contact_submit_success_message}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-09T20:17:24.708244" elapsed="0.020622"/>
+</kw>
+<status status="PASS" start="2025-12-09T20:17:24.707737" elapsed="0.021277"/>
+</kw>
+<kw name="Navigate To Home Page And Verify That Landed To Home Page" owner="keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-09T20:17:24.730117" level="INFO">Clicking element 'xpath = (//a[@href = '/'])[3]'.</msg>
+<arg>${contact_home_page_link}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-09T20:17:24.729775" elapsed="1.030037"/>
+</kw>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2025-12-09T20:17:25.763558" level="INFO">${home_page_url} = https://automationexercise.com/</msg>
+<var>${home_page_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2025-12-09T20:17:25.760110" elapsed="0.003500"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${home_page_url}</arg>
+<arg>${base_url}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-12-09T20:17:25.763778" elapsed="0.000275"/>
+</kw>
+<status status="PASS" start="2025-12-09T20:17:24.729330" elapsed="1.034821"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-09T20:17:25.764407" elapsed="0.063364"/>
+</kw>
+<status status="PASS" start="2025-12-09T20:17:20.243201" elapsed="5.584711"/>
+</test>
+<status status="PASS" start="2025-12-09T20:17:20.020388" elapsed="5.808196"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test Case 6" id="s1" pass="1" fail="0" skip="0">Test Case 6</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
