@@ -8,7 +8,7 @@ Fill Out Contact Us Form And Submit
     Input Text   ${contact_email}       ${email}
     Input Text      ${contact_subject}      ${contact_subject_name}
     Input Text      ${contact_message}      ${contact_message_text}
-    Choose File 	 ${contact_upload_file}         /Users/sefikkesim/Desktop/image.png
+    #Choose File 	 ${contact_upload_file}         /Users/sefikkesim/Desktop/image.png
     Click Element   ${contact_submit_button}
     Handle Alert 	 action=ACCEPT 	 timeout=1
     
