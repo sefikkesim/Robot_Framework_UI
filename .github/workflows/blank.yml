@@ -13,6 +13,21 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Install FFmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
+      - name: Start virtual display (Xvfb)
+        run: |
+          export DISPLAY=:99
+          Xvfb :99 -screen 0 1920x1080x24 &
+        shell: bash
+
+      - name: Start screen recording
+        run: |
+          ffmpeg -y -video_size 1920x1080 -framerate 30 -f x11grab -i :99 \
+            -codec:v libx264 -preset veryfast screen_recording.mp4 &
+        shell: bash
+
       - name: Remove preinstalled ChromeDriver (important)
         run: |
           sudo apt-get remove -y chromium-browser chromium-chromedriver || true
@@ -42,6 +57,8 @@ jobs:
           pip install webdriver-manager
 
       - name: Run Robot Framework Tests
+        env:
+          DISPLAY: :99
         run: |
           robot -d results test_cases/test_case_6/test_case_6.robot # adjust folder name if your tests are elsewhere
 
@@ -50,3 +67,16 @@ jobs:
         with:
           name: robot-results
           path: results/
+
+      - name: Upload Screen Recording
+        uses: actions/upload-artifact@v4
+        with:
+          name: screen-recording
+          path: screen_recording.mp4
+
+      - name: Upload Test Screenshots (if any)
+        uses: actions/upload-artifact@v4
+        with:
+          name: screenshots
+          path: results/**/*.png
+          if-no-files-found: ignore
