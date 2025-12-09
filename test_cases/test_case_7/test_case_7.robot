@@ -1,6 +1,6 @@
 *** Settings ***
 
-Library    Selenium2Library 
+Library                 SeleniumLibrary 
 
 Resource                  ../variable.robot
 Resource                  ../test_data.robot
@@ -13,4 +13,5 @@ Test Teardown      Close Browser
 
 *** Test Case ***
 Verify Test Cases Page
+    [Tags]   Smoke
     Navigate To Test Cases Page And Verify That Landed To Test Cases Page

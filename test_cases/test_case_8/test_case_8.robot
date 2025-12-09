@@ -1,5 +1,5 @@
 *** Settings ***
-Library    Selenium2Library 
+Library                    SeleniumLibrary 
 
 
 Resource                  ../variable.robot
@@ -12,8 +12,10 @@ Resource                   keywords.robot
 Test Setup         Run keywords   Navigate The Website And Verify Home Page is Visible
 Test Teardown      Close Browser
 
-*** Test Case ***
+
+*** Test Cases ***
 Verify All Products and Product Detail Page
+    [Tags]   Smoke
     Navigate To Product Page and Verify The Page Is Loaded
     Click on View Product link of First Product 
     Verify Product Details 

@@ -14,6 +14,7 @@ Test Teardown      Close Browser
 
 *** Test Cases ***
 Contact Us Form
+    [Tags]  Regression
     Navigate To Contact Us Page And Verify That Landed To Contact Us Page
     Fill Out Contact Us Form And Submit	 
     Verify That The Form is Submitted Successfully
