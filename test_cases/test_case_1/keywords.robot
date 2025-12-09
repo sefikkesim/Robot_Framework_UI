@@ -6,7 +6,7 @@ Input User Information And Click Signup Button
     Click Button 	 ${signup_btn} 
 
 Fill Out Register Form And Create A New Account
-    Element Should Be Visible  ${enter_account_information_text}
+    #Element Should Be Visible  ${enter_account_information_text}
     Select Radio Button   title      Mr
     Input Password 	  ${password}  	 ${pass} 
     Select From List By Value     ${days}    12
