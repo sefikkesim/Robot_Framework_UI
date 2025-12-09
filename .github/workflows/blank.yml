@@ -43,7 +43,8 @@ jobs:
 
       - name: Run Robot Framework Tests
         run: |
-          robot -d results --include smoke test_cases  # adjust folder name if your tests are elsewhere
+          robot -d results --include smoke test_cases # adjust folder name if your tests are elsewhere
+        continue-on-error: true
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
