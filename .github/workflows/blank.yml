@@ -45,17 +45,8 @@ jobs:
         run: |
           robot -d results test_cases/test_case_6/test_case_6.robot # adjust folder name if your tests are elsewhere
 
-      # - name: Upload Artifacts
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #     name: robot-results
-      #     path: results/
-
-      - name: Deploy Robot Report to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./results
-          publish_branch: gh-pages
-          user_name: github-actions
-          user_email: github-actions@github.com
+          name: robot-results
+          path: results/
